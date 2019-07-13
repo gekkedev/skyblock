@@ -1,0 +1,11 @@
+main: com.gekkedev.skyblock.Main
+name: SkyBlock
+version: 1.0
+api-version: 1.13
+commands:
+   skyblock:
+      description: Teleport to your SkyBlock island
+      usage:
+         /skyblock - Join SkyBlock!
+         /skyblock restart - Regenerate your SkyBlock island!
+      aliases: [sb]
