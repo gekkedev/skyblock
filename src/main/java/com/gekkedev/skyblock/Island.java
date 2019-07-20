@@ -29,13 +29,14 @@ public class Island {
 	
 	private Location getNewLocation() {
 		//generate a random spawn location
-		int radius = 15;
+		int radius = 25;
+		int minRadius = Bukkit.getSpawnRadius() * 3;
 		int maxRadius = radius * Main.config.getConfigurationSection("IslandBases").getKeys(false).size();
 		return new Location(
 				Main.sbworld,
-				Math.random() * maxRadius * 2 - maxRadius,
+				minRadius + Math.random() * maxRadius * 2 - maxRadius,
 				20, //height
-				Math.random() * maxRadius * 2 - maxRadius
+				minRadius + Math.random() * maxRadius * 2 - maxRadius
 		);
 	}
 
@@ -110,7 +111,6 @@ public class Island {
 
 	public void tpThere() {
 		this.owner.sendMessage("Teleporting you to your SkyBlock island...");
-		this.owner.getInventory().clear();
 		this.owner.teleport(getPlayerSpawn());
 	}
 }
