@@ -3,7 +3,6 @@ package com.gekkedev.skyblock.handlers;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,8 +20,8 @@ public class ItemDropper implements Listener {
 			EntityType mob = EntityType.UNKNOWN;
 			int dice = (int) Math.round(Math.random() * 128);
 			if (dice <= 8) { //chance 1:16 (8:128)
-				reward = "iron ore";
-				item = Material.IRON_ORE;
+				reward = "dirt";
+				item = Material.DIRT;
 			} else if (dice == 5) { //1:128
 				reward = "lava bucket";
 				item = Material.LAVA_BUCKET;
@@ -36,24 +35,27 @@ public class ItemDropper implements Listener {
 				reward = "sand";
 				item = Material.SAND;
 			} else if (dice <= 11) {
-				reward = "dirt";
-				item = Material.DIRT;
-			} else if (dice <= 13) {
+				reward = "iron ore";
+				item = Material.IRON_ORE;
+			} else if (dice <= 12) {
+				reward = "redstone ore";
+				item = Material.REDSTONE_ORE;
+			} else if (dice <= 14) {
 				reward = "gravel";
 				item = Material.GRAVEL;
-			} else if (dice == 14) {
+			} else if (dice == 15) {
 				reward = "chicken";
 				mob = EntityType.CHICKEN;
-			} else if (dice == 15) {
+			} else if (dice == 16) {
 				reward = "pig";
 				mob = EntityType.PIG;
-			} else if (dice == 16) {
+			} else if (dice == 17) {
 				reward = "cow";
 				mob = EntityType.COW;
-			} else if (dice == 17) {
+			} else if (dice == 18) {
 				reward = "sheep";
 				mob = EntityType.SHEEP;
-			} else if (dice == 18) {
+			} else if (dice == 19) {
 				reward = "wolf";
 				mob = EntityType.WOLF;
 			} else event.getBlock().breakNaturally();
