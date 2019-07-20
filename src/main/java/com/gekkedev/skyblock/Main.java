@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.gekkedev.skyblock.commands.SBCommand;
 import com.gekkedev.skyblock.handlers.AutoSaver;
 import com.gekkedev.skyblock.handlers.ChatModifier;
+import com.gekkedev.skyblock.handlers.ItemDropper;
 import com.gekkedev.skyblock.handlers.MotdModifier;
 
 /**
@@ -37,6 +38,7 @@ public class Main extends JavaPlugin
         getServer().getPluginManager().registerEvents(new MotdModifier(), this);
         getServer().getPluginManager().registerEvents(new ChatModifier(), this);
         getServer().getPluginManager().registerEvents(new AutoSaver(), this);
+        getServer().getPluginManager().registerEvents(new ItemDropper(), this);
 
         //register commands
         this.getCommand("skyblock").setExecutor(new SBCommand());
