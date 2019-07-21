@@ -38,8 +38,8 @@ public class ItemDropper implements Listener {
 				reward = "iron ore";
 				item = Material.IRON_ORE;
 			} else if (dice <= 12) {
-				reward = "redstone ore";
-				item = Material.REDSTONE_ORE;
+				reward = "redstone";
+				item = Material.REDSTONE;
 			} else if (dice <= 14) {
 				reward = "gravel";
 				item = Material.GRAVEL;
