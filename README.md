@@ -6,6 +6,8 @@ Minimalist SkyBlock plugin for Spigot-based Minecraft servers
 ## Installation
 1. Download [this JAR file](https://github.com/gekkedev/skyblock/releases/latest) or compile it by yourself.
 2. Place the file in your server's plugins directory (using `/reload` is not recommendable).
+3. If your server is running, shut it down.
+4. Launch your server as usual (or just use `/restart`).
 
 ## Usage
 Enter `/skyblock` or just `/sb` to start playing SkyBlock and `/spawn` (an additional plugin is required for this).  
